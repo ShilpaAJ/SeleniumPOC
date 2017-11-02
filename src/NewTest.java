@@ -13,9 +13,11 @@ public class NewTest {
 	@Test
   public void main()
   {
+	  System.out.println("setting /usr/bin/chromerdriver");
 	  System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver"); //Set a system property “webdriver.chrome.driver” to the path of your ChromeDriver.exe file
-	  
+      System.out.println("About to Initialize");
       WebDriver driver = new ChromeDriver(); //instantiate a driver object in Selenium
+      System.out.println("Initialized");
       //WebDriverWait waiting = new WebDriverWait(driver, 10, 100);
       
       driver.get("https://facebook.com/");  //navigate to a page.
