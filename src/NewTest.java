@@ -1,8 +1,10 @@
 import org.openqa.selenium.By;
- 
+import com.beust.jcommander.JCommander;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import com.beust.jcommander.Parameter;
+import org.testng.TestNG;
 
 public class NewTest {
 	
