@@ -11,7 +11,7 @@ public class NewTest {
 	@Test
   public void main()
   {
-	  System.setProperty("webdriver.chrome.driver","D:\\ChromeWebDriver\\chromedriver.exe"); //Set a system property ìwebdriver.chrome.driverî to the path of your ChromeDriver.exe file
+	  System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver"); //Set a system property ‚Äúwebdriver.chrome.driver‚Äù to the path of your ChromeDriver.exe file
 	  
       WebDriver driver = new ChromeDriver(); //instantiate a driver object in Selenium
       //WebDriverWait waiting = new WebDriverWait(driver, 10, 100);
