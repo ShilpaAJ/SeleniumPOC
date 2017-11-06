@@ -22,8 +22,8 @@ public class NewTest {
       //WebDriverWait waiting = new WebDriverWait(driver, 10, 100);
       
       driver.get("https://facebook.com/");  //navigate to a page.
-      driver.findElement(By.id("email")).sendKeys("shamit619"); 
-      driver.findElement(By.id("pass")).sendKeys("65something");
+      driver.findElement(By.id("email")).sendKeys(""); 
+      driver.findElement(By.id("pass")).sendKeys("");
       
       driver.findElement(By.id("loginbutton")).click();
       System.out.println("Successfully logged in");
