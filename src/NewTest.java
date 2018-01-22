@@ -54,10 +54,10 @@ public class NewTest {
       driver.findElement(By.xpath(strControl2)).click();
       Thread.sleep(5000);
       
-      File screenshot1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+      File screenshot3 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
       System.out.println("After movie elemet click, time is " +  System.currentTimeMillis());
-      FileUtils.copyFile(screenshot1, new File("D:\\ChromeWebDriver\\screenshot" + System.currentTimeMillis() + ".png"));
-      System.out.println("Screenshot2 captured");
+      FileUtils.copyFile(screenshot3, new File("D:\\ChromeWebDriver\\screenshot" + System.currentTimeMillis() + ".png"));
+      System.out.println("Screenshot3 captured");
       
       //driver.findElement(By.id("email")).sendKeys("shilpa.jain812@gmail.com"); 
       //driver.findElement(By.id("pass")).sendKeys("Facebook@123");
