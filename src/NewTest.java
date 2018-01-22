@@ -27,7 +27,8 @@ public class NewTest {
 	  //System.setProperty("webdriver.chrome.driver","D:\\ChromeWebDriver\\chromedriver.exe"); 
 	  //Set a system property webdriver.chrome.driverto the path of your ChromeDriver.exe file
 
-      WebDriver driver = new ChromeDriver(); 
+     // WebDriver driver = new ChromeDriver(); 
+	  WebDriver driver = new FirefoxDriver();
       driver.manage().window().maximize();
       //WebDriverWait waiting = new WebDriverWait(driver, 10, 100);
       
