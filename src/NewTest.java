@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 //import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import com.beust.jcommander.Parameter;
@@ -23,7 +24,12 @@ public class NewTest {
       System.out.println("About to Initialize");
       ChromeOptions options = new ChromeOptions();
       options.addArguments("--disable-notifications");
-      WebDriver driver = new ChromeDriver(options); //instantiate a driver object in Selenium
+      
+   	  FirefoxProfile ffprofile = new FirefoxProfile();
+  	  ffprofile.setPreference("dom.webnotifications.enabled", false);
+  	  WebDriver driver = new FirefoxDriver(ffprofile);
+     // WebDriver driver = new ChromeDriver(options); //instantiate a driver object in Selenium
+     // WebDriver driver = new FirefoxDriver(); //instantiate a driver object in Selenium
 
 
       System.out.println("Initialized");
