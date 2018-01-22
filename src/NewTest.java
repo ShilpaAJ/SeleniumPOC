@@ -32,7 +32,8 @@ public class NewTest {
       driver.manage().window().maximize();
       //WebDriverWait waiting = new WebDriverWait(driver, 10, 100);
       
-      String strControl1 = "//div[contains(@class, 'tup')]//a[contains(text(), 'Movies')]";
+      String strControl1 = "//*[@id='nav_item_2']/span/a";
+	  
       String strControl2 = "//div[contains(@class, 'page-module-content')]//div[contains(@class, 'Carousel')][1]//li[1]//a[contains(@class, 'flip-title')]";
       
       //driver.get("https://facebook.com/");  //navigate to a page.
