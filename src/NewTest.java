@@ -20,8 +20,8 @@ public class NewTest {
   {
 	  
 	  
-	  System.out.println("setting /usr/local/share/chromedriver");
- 	  System.setProperty("webdriver.chrome.driver","/usr/local/share/chromedriver");
+	//  System.out.println("setting /usr/local/share/chromedriver");
+ 	  //System.setProperty("webdriver.chrome.driver","/usr/local/share/chromedriver");
  
  
 	  //System.setProperty("webdriver.chrome.driver","D:\\ChromeWebDriver\\chromedriver.exe"); 
