@@ -39,12 +39,17 @@ public class NewTest {
       driver.get("https://www.directv.com/entertainment");
       Thread.sleep(5000);
       driver.findElement(By.xpath(strControl1)).click();
+	  File screenshot1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	  FileUtils.copyFile(screenshot1, new File("D:\\ChromeWebDriver\\screenshot" + System.currentTimeMillis() + ".png"));
+      System.out.println("Screenshot1 captured");
+
+
       Thread.sleep(5000);
       System.out.println("Before capture & driver is " + driver);
-      File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+      File screenshot2 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
       System.out.println("After Movie click, time is " +  System.currentTimeMillis());
-      FileUtils.copyFile(screenshot, new File("D:\\ChromeWebDriver\\screenshot" + System.currentTimeMillis() + ".png"));
-      System.out.println("Screenshot1 captured");
+      FileUtils.copyFile(screenshot2, new File("D:\\ChromeWebDriver\\screenshot" + System.currentTimeMillis() + ".png"));
+      System.out.println("Screenshot2 captured");
 
       driver.findElement(By.xpath(strControl2)).click();
       Thread.sleep(5000);
