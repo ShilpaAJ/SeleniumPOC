@@ -36,8 +36,8 @@ public class NewTest {
 	  
       String strControl2 = "//div[contains(@class, 'page-module-content')]//div[contains(@class, 'Carousel')][1]//li[1]//a[contains(@class, 'flip-title')]";
       
-      driver.get("https://facebook.com/");  //navigate to a page.
-      //driver.get("https://www.directv.com/entertainment");
+      //driver.get("https://facebook.com/");  //navigate to a page.
+      driver.get("https://directv.com/entertainment");
 	  Thread.sleep(5000);
 
 	  File screenshot0 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
