@@ -1,4 +1,11 @@
+import java.io.File;
+import java.io.IOException;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import java.io.File;
+import org.apache.commons.io.FileUtils;
 import com.beust.jcommander.JCommander;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +24,7 @@ public class NewTest {
 	public WebDriver driver;
 	
 	@Test
-  public void main() throws InterruptedException
+  public void main() throws InterruptedException, IOException
   {
 	  System.out.println("setting chromedriver");
 	  System.setProperty("webdriver.chrome.driver","C:/Users/ag081u/Documents/aalok/softwares/chromedriver.exe");
@@ -41,11 +48,24 @@ public class NewTest {
       
       driver.findElement(By.id("loginbutton")).click();
       System.out.println("Successfully logged in");
-     // driver.findElement(By.partialLinkText("on your mind, Aalok?")).click();
+      
       Thread.sleep(2000);
+      System.out.println("Before capture & driver is " + driver);
+      File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+      System.out.println("line 553, time is " + System.currentTimeMillis());
+      //FileUtils.copyFile(screenshot, new File("/home/jenkins/sharedspace/TO_BE_Deleted_sk8457/selenium_chrome/src/Results/Reports/screenshot" + System.currentTimeMillis() + ".png"));
+      FileUtils.copyFile(screenshot, new File("/home/jenkins/sharedspace/screenshot" + System.currentTimeMillis() + ".png"));
+      System.out.println("Screenshot captured");
       driver.findElement(By.xpath("//span[contains(text(), 'Make Post')]")).click();
       Thread.sleep(2000);
+      File screenshot1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+      FileUtils.copyFile(screenshot1, new File("/home/jenkins/sharedspace/screenshot" + System.currentTimeMillis() + ".png"));
+
       driver.findElement(By.xpath("//span[contains(text(), 'Post')]")).click();
+      File screenshot2 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+      FileUtils.copyFile(screenshot2, new File("/home/jenkins/sharedspace/screenshot" + System.currentTimeMillis() + ".png"));
 
       
   }
