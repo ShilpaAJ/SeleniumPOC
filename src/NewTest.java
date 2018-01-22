@@ -37,6 +37,8 @@ public class NewTest {
       
       //driver.get("https://facebook.com/");  //navigate to a page.
       driver.get("https://www.directv.com/entertainment");
+	  Thread.sleep(5000);
+
 	  File screenshot0 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	  FileUtils.copyFile(screenshot0, new File("/home/jenkins/sharedspace/src/Results/Reports/screenshot" + System.currentTimeMillis() + ".png"));
       System.out.println("Screenshot0 captured");
