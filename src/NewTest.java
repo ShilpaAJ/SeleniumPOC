@@ -36,16 +36,16 @@ public class NewTest {
 	  
       String strControl2 = "//div[contains(@class, 'page-module-content')]//div[contains(@class, 'Carousel')][1]//li[1]//a[contains(@class, 'flip-title')]";
       
-      //driver.get("https://facebook.com/");  //navigate to a page.
-      driver.get("https://directv.com/entertainment");
+      driver.get("https://facebook.com/");  //navigate to a page.
+      //driver.get("https://www.directv.com/entertainment");
 	  Thread.sleep(5000);
 
 	  File screenshot0 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	  FileUtils.copyFile(screenshot0, new File("/home/jenkins/sharedspace/src/Results/Reports/screenshot" + System.currentTimeMillis() + ".png"));
       System.out.println("Screenshot0 captured");
 	  
-      Thread.sleep(5000);
-      driver.findElement(By.xpath(strControl1)).click();
+      Thread.sleep(50000);
+      /*driver.findElement(By.xpath(strControl1)).click();
 	  File screenshot1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	  FileUtils.copyFile(screenshot1, new File("/home/jenkins/sharedspace/src/Results/Reports/" + System.currentTimeMillis() + ".png"));
       System.out.println("Screenshot1 captured");
@@ -69,7 +69,7 @@ public class NewTest {
       //driver.findElement(By.id("email")).sendKeys("shilpa.jain812@gmail.com"); 
       //driver.findElement(By.id("pass")).sendKeys("Facebook@123");
       
-      //driver.findElement(By.id("loginbutton")).click();
+      //driver.findElement(By.id("loginbutton")).click();*/
       System.out.println("Successfully logged in");
  
   }
