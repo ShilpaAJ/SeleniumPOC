@@ -18,7 +18,8 @@ public class NewTest {
 	@Test
   public void main() throws InterruptedException, IOException
   {
-	  System.setProperty("webdriver.chrome.driver","D:\\ChromeWebDriver\\chromedriver.exe"); //Set a system property “webdriver.chrome.driver” to the path of your ChromeDriver.exe file
+	  System.setProperty("webdriver.chrome.driver","D:\\ChromeWebDriver\\chromedriver.exe"); 
+	  //Set a system property webdriver.chrome.driverto the path of your ChromeDriver.exe file
 	  //instantiate a driver object in Selenium
       WebDriver driver = new ChromeDriver(); 
       driver.manage().window().maximize();
