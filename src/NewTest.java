@@ -38,13 +38,13 @@ public class NewTest {
       //driver.get("https://facebook.com/");  //navigate to a page.
       driver.get("https://www.directv.com/entertainment");
 	  File screenshot0 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	  FileUtils.copyFile(screenshot0, new File("/home/jenkins/workspace/TO_BE_Deleted_sk8457/DockerSLaveSelenium/src/Results/Reports/screenshot" + System.currentTimeMillis() + ".png"));
+	  FileUtils.copyFile(screenshot0, new File("/home/jenkins/workspace/TO_BE_Deleted_sk8457/selenium_chrome/src/Results/Reports/screenshot" + System.currentTimeMillis() + ".png"));
       System.out.println("Screenshot0 captured");
 	  
       Thread.sleep(5000);
       driver.findElement(By.xpath(strControl1)).click();
 	  File screenshot1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	  FileUtils.copyFile(screenshot1, new File("/home/jenkins/workspace/TO_BE_Deleted_sk8457/DockerSLaveSelenium/src/Results/Reports/" + System.currentTimeMillis() + ".png"));
+	  FileUtils.copyFile(screenshot1, new File("/home/jenkins/workspace/TO_BE_Deleted_sk8457/selenium_chrome/src/Results/Reports/" + System.currentTimeMillis() + ".png"));
       System.out.println("Screenshot1 captured");
 
 
@@ -52,7 +52,7 @@ public class NewTest {
       System.out.println("Before capture & driver is " + driver);
       File screenshot2 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
       System.out.println("After Movie click, time is " +  System.currentTimeMillis());
-      FileUtils.copyFile(screenshot2, new File("/home/jenkins/workspace/TO_BE_Deleted_sk8457/DockerSLaveSelenium/src/Results/Reports/" + System.currentTimeMillis() + ".png"));
+      FileUtils.copyFile(screenshot2, new File("/home/jenkins/workspace/TO_BE_Deleted_sk8457/selenium_chrome/src/Results/Reports/" + System.currentTimeMillis() + ".png"));
       System.out.println("Screenshot2 captured");
 
       driver.findElement(By.xpath(strControl2)).click();
@@ -60,7 +60,7 @@ public class NewTest {
       
       File screenshot3 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
       System.out.println("After movie elemet click, time is " +  System.currentTimeMillis());
-      FileUtils.copyFile(screenshot3, new File("/home/jenkins/workspace/TO_BE_Deleted_sk8457/DockerSLaveSelenium/src/Results/Reports/" + System.currentTimeMillis() + ".png"));
+      FileUtils.copyFile(screenshot3, new File("/home/jenkins/workspace/TO_BE_Deleted_sk8457/selenium_chrome/src/Results/Reports/" + System.currentTimeMillis() + ".png"));
       System.out.println("Screenshot3 captured");
       
       //driver.findElement(By.id("email")).sendKeys("shilpa.jain812@gmail.com"); 
