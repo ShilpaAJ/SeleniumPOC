@@ -48,13 +48,14 @@ public class NewTest {
 	  File screenshot0 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	  FileUtils.copyFile(screenshot0, new File("/home/jenkins/sharedspace/src/Results/Reports/screenshot" + System.currentTimeMillis() + ".png"));
       System.out.println("Screenshot0 captured");
-	  
-      driver.findElement(By.xpath("//span[contains(text(), 'Post')]")).click();
-      Thread.sleep(2000);
+	  Thread.sleep(30000);
+
+     /// driver.findElement(By.xpath("//span[contains(text(), 'Post')]")).click();
+      //Thread.sleep(2000);
 
 	  File screenshot1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	  FileUtils.copyFile(screenshot1, new File("/home/jenkins/sharedspace/src/Results/Reports/screenshot" + System.currentTimeMillis() + ".png"));
-      System.out.println("Screenshot0 captured");
+      System.out.println("Screenshot1 captured");
 	  
       Thread.sleep(5000);
 	  
